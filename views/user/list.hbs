@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+<a href="/users/add">Thêm tài khoản mới</a>
+
+<ul class="people_list">
+    {{#each result}}
+        <li>{{this.id}} - {{this.username}} -- {{this.email}}
+            <a href="/users/detail/{{this.id}}">Xem chi tiết</a> &nbsp;
+            <a href="/users/update/{{this.id}}">Sửa</a> &nbsp;
+            <a href="/users/delete/{{this.id}}">Xóa</a>
+        </li>
+    {{/each}}
+</ul>
+
